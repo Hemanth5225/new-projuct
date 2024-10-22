@@ -1,0 +1,46 @@
+//Retrieve All Transactions
+GET http://localhost:3000/transactions/
+
+###
+
+//Add a new transaction (income or expense)
+post http://localhost:3000/transactions/
+Content-Type: application/json
+
+{
+    "title":"incentive",
+    "amount":10000, 
+    "type":"income", 
+    "category":"employement",
+    "date":"2024-10-23"
+}
+
+###
+
+// GET /transactions/:id - Retrieve a specific transaction by ID
+GET http://localhost:3000/transactions/1/
+
+###
+// PUT /transactions/:id - Update a transaction by ID
+PUT http://localhost:3000/transactions/1
+Content-Type: application/json
+
+{
+    "title":"increment",
+    "amount":10000, 
+    "type":"income", 
+    "category":"employement",
+    "date":"2024-10-23"
+}
+
+
+###
+//DELETE /transactions/:id - Delete a transaction by ID 
+DELETE http://localhost:3000/transactions/2/
+
+###
+//Retrieve a summary of transactions (total income, total expenses, balance)
+ GET http://localhost:3000/summary/
+
+
+
